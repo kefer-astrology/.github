@@ -1,12 +1,11 @@
-# Hlavní rozcestník
-
 ## Architektura aplikace
 
-- Definována ve [funkční vrstvě](https://github.com/kefer-astrology/function-wrapper)
+- Definována ve [funkční vrstvě](https://github.com/kefer-astrology/function-wrapper/blob/main/docs/architecture.md)
 - Jedná se o python modul, který je možno použít i samostatně
-- Máme vystavené demo na platformě streamlit
+- Demo funkční vrstvy vystaveno na platformě streamlit
+- Lokálně lze také spouštět knihovny TkInter a Kivy (není primárním zájmem pro vývoj)
 - Zobrazovací vstva (zároveň s kompilátorem) je založena na TauriApps (Rust)
-- v současné době ve vývoji (bude uvolněna po standartizaci funkční vrstvy)
+- V současné době je ve vývoji (bude uvolněna po standartizaci funkční vrstvy)
 
 ## Kompilace spustitelných programů
 

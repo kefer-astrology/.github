@@ -1,22 +1,27 @@
+## Organizace 
+
+Kefer Astrology slouží jako propojení pro výpočty napříč různými astrologickými systémy.
+Základní nastavení provádí všechny výpočty přímo nad SPICE/JPL daty (švýcarské efemeridy je možno použít také).
+Na pořadu d
+
 ## Architektura aplikace
 
-- Definována ve [funkční vrstvě](https://github.com/kefer-astrology/function-wrapper/blob/main/docs/architecture.md)
-- Jedná se o python modul, který je možno použít i samostatně
-- Demo funkční vrstvy vystaveno na platformě streamlit
-- Lokálně lze také spouštět knihovny TkInter a Kivy (není primárním zájmem pro vývoj)
-- Zobrazovací vstva (zároveň s kompilátorem) je založena na TauriApps (Rust)
-- V současné době je ve vývoji (bude uvolněna po standartizaci funkční vrstvy)
+- Udržujeme dvě prostředí s identickou funkcionalitou (v současné době ve vývoji)
+  - [Python](https://github.com/kefer-astrology/function-wrapper/blob/main/docs/architecture.md) (s grafickými nadstavbami kivy, streamlit, tkinter)
+  - [Rust Tauri](https://github.com/kefer-astrology/tauri-application/blob/main/docs/content/docs/architecture.md) (grafická nadstavba je na [React](https://github.com/kefer-astrology/tauri-application/blob/main/docs/content/docs/frontend-react.md) / [Svelte](https://github.com/kefer-astrology/tauri-application/blob/main/docs/content/docs/frontend-svelte.md))
+- Zároveň zde máme i zdrojové kódy našich stránek
+- Do budoucna se počítá ještě s několika podprojekty:
+  - Databáze osobností a událostí (použitelná jako zdroj pro načítání horoskopů)
+  - Podklady pro definice nových efemerid
 
-## Kompilace spustitelných programů
 
-- Releasy se provádí pomocí github actions
+## Spustitelné programy
 
-## Dokumentace
+- Vydání nových verzí ještě nejsou plně zavedené
+- V současné chvíli jsou k dispozici jako artefakty github workflows
 
-- TBD,
-- máme [interentovou prezentaci](https://github.com/kefer-astrology/web-presentation) 
 
 ## Testování
 
-- funkční vrstva je testována seprátně
-- uživatelské prostředí pomocí github actions
+- Obě prostředí jsou testována seprátně (Python / Rust) - využíváme github actions kde to jde
+

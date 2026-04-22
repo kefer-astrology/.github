@@ -1,8 +1,7 @@
 ## Organizace 
 
 Kefer Astrology slouží jako propojení pro výpočty napříč různými astrologickými systémy.
-Základní nastavení provádí všechny výpočty přímo nad SPICE/JPL daty (švýcarské efemeridy je možno použít také).
-Na pořadu d
+Základní nastavení provádí všechny výpočty přímo nad NASA JPL daty (švýcarské efemeridy je možno použít také).
 
 ## Architektura aplikace
 
@@ -13,6 +12,17 @@ Na pořadu d
 - Do budoucna se počítá ještě s několika podprojekty:
   - Databáze osobností a událostí (použitelná jako zdroj pro načítání horoskopů)
   - Podklady pro definice nových efemerid
+
+## License defintion
+
+Rust standalone path:
+  backend_for_chart(chart)
+    → SwissAstronomyBackend     → libswe → (AGPL)
+    → JplAstronomyBackend       → anise → MPL-2.0 (Mozzila Public License)
+
+Python sidecar path:
+  SwissAstronomyBackend   → Kerykeion → pyswisseph → libswe (AGPL)
+  JplAstronomyBackend     → Skyfield  → de421.bsp  → MIT + public domain
 
 
 ## Spustitelné programy

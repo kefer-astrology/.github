@@ -6,8 +6,8 @@ Základní nastavení provádí všechny výpočty přímo nad NASA JPL daty (š
 ## Architektura aplikace
 
 - Udržujeme dvě prostředí s identickou funkcionalitou (v současné době ve vývoji)
-  - [Python](https://github.com/kefer-astrology/function-wrapper/blob/main/docs/architecture.md) (s grafickými nadstavbami kivy, streamlit, tkinter)
-  - [Rust Tauri](https://github.com/kefer-astrology/tauri-application/blob/main/docs/content/docs/architecture.md) (grafická nadstavba je na [React](https://github.com/kefer-astrology/tauri-application/blob/main/docs/content/docs/frontend-react.md) / [Svelte](https://github.com/kefer-astrology/tauri-application/blob/main/docs/content/docs/frontend-svelte.md))
+  - [Python](https://kefer-astrology.github.io/function-wrapper/architecture/) (s grafickými nadstavbami kivy, streamlit, tkinter)
+  - [Rust Tauri](https://kefer-astrology.github.io/tauri-application/docs/architecture/) (grafická nadstavba je na [React](https://kefer-astrology.github.io/tauri-application/docs/frontend-react/) / [Svelte](https://kefer-astrology.github.io/tauri-application/docs/frontend-svelte/))
 - Zároveň zde máme i zdrojové kódy našich stránek
 - Do budoucna se počítá ještě s několika podprojekty:
   - Databáze osobností a událostí (použitelná jako zdroj pro načítání horoskopů)

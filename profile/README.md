@@ -1,37 +1,72 @@
-## Organizace 
 
-Kefer Astrology slouží jako propojení pro výpočty napříč různými astrologickými systémy.
-Základní nastavení provádí všechny výpočty přímo nad NASA JPL daty (švýcarské efemeridy je možno použít také).
+# Kefer Astrology
 
-## Architektura aplikace
+**An extensible platform for astronomical computation, astrological research, and visualization.**
 
-- Udržujeme dvě prostředí s identickou funkcionalitou (v současné době ve vývoji)
-  - [Python](https://kefer-astrology.github.io/function-wrapper/architecture/) (s grafickými nadstavbami kivy, streamlit, tkinter)
-  - [Rust Tauri](https://kefer-astrology.github.io/tauri-application/docs/architecture/) (grafická nadstavba je na [React](https://kefer-astrology.github.io/tauri-application/docs/frontend-react/) / [Svelte](https://kefer-astrology.github.io/tauri-application/docs/frontend-svelte/))
-- Zároveň zde máme i zdrojové kódy našich stránek
-- Do budoucna se počítá ještě s několika podprojekty:
-  - Databáze osobností a událostí (použitelná jako zdroj pro načítání horoskopů)
-  - Podklady pro definice nových efemerid
+Kefer Astrology is an independent, offline-first project bringing together precise astronomical calculations, diverse astrological traditions, and modern analytical tools.
 
-## License defintion
+Our goal is to create a transparent, verifiable, and extensible foundation for exploring astronomical and astrological relationships.
 
-Rust standalone path:
-  backend_for_chart(chart)
-    → SwissAstronomyBackend     → libswe → (AGPL)
-    → JplAstronomyBackend       → anise → MPL-2.0 (Mozzila Public License)
+## Ecosystem
 
-Python sidecar path:
-  SwissAstronomyBackend   → Kerykeion → pyswisseph → libswe (AGPL)
-  JplAstronomyBackend     → Skyfield  → de421.bsp  → MIT + public domain
+### Applications & Calculation Engines
+- [Tauri Application](https://github.com/kefer-astrology/tauri-application) — Desktop application with a Rust-based astronomical engine.
+- [Function Wrapper](https://github.com/kefer-astrology/function-wrapper) — Python-based calculation alternative and integration layer.
+- **Astrological Schools** — Extensible calculation methodologies, conventions, and interpretation models.
 
+### Data & Resources
+- [Famous Persons Database](https://github.com/kefer-astrology/famous-persons-database) — Historical and biographical records for astrological research.
+- **Astronomical Resources** — JPL/SPICE ephemerides and supporting scientific datasets.
+- **Graphical Resources** — Original illustrations, symbols, and visual assets maintained separately.
 
-## Spustitelné programy
+### Web & Community
+- [Web Presentation](https://github.com/kefer-astrology/web-presentation) — Website and public presentation.
+- **Community Forum** — Planned space for discussion, research, feedback, and collaboration.
+- **Roadmap** — Community proposals, development priorities, and release planning.
 
-- Vydání nových verzí ještě nejsou plně zavedené
-- V současné chvíli jsou k dispozici jako artefakty github workflows
+## Our Approach
 
+We aim to balance openness, scientific reproducibility, and sustainable independent development.
 
-## Testování
+- **Open foundations** — Transparent astronomical calculations, shared interfaces, and reusable components.
+- **Extensible methodologies** — Support for multiple astrological schools and calculation approaches.
+- **Protected original work** — Selected research, interpretations, graphical sources, and specialized implementations may remain proprietary.
+- **Offline-first** — Core functionality should operate locally without mandatory cloud services.
+- **Community collaboration** — Open discussions, contributions, validation, and shared research.
 
-- Obě prostředí jsou testována seprátně (Python / Rust) - využíváme github actions kde to jde
+Each repository defines its own license, contribution rules, and distribution terms.
 
+## Get Involved
+
+We welcome contributions from developers, researchers, astrologers, designers, and enthusiasts.
+
+You can participate by:
+- Reporting bugs and proposing features through GitHub Issues.
+- Contributing code, documentation, or test cases.
+- Helping validate calculations and historical data.
+- Discussing methodologies and future functionality.
+- Participating in community discussions as the forum develops.
+
+## Development & Roadmap
+
+The project is evolving toward a modular architecture separating:
+
+- Astronomical computation
+- Astrological methodologies
+- Interpretation and research
+- Visualization and user experience
+- Data and resource management
+- Community collaboration
+
+Development takes place across public and private repositories, with publicly available components documented and licensed individually.
+
+## Links
+
+- [GitHub Organization](https://github.com/kefer-astrology)
+- [Desktop Application](https://github.com/kefer-astrology/tauri-application)
+- [Python Engine](https://github.com/kefer-astrology/function-wrapper)
+- [Historical Database](https://github.com/kefer-astrology/famous-persons-database)
+
+---
+
+*Kefer Astrology — Exploring celestial relationships through computation, research, and collaboration.*
